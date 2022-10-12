@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'alurapic';
   description = "Leao";
-  url="https://www.infoescola.com/wp-content/uploads/2017/04/leao-126767138.jpg"
+  url="https://st.depositphotos.com/1020341/4233/i/450/depositphotos_42333899-stock-photo-portrait-of-huge-beautiful-male.jpg"
 }
