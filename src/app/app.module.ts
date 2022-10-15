@@ -6,11 +6,11 @@ import { PhotoComponent } from './photo/photo.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PhotoComponent
   ],
   imports: [
-    BrowserModule,
-    PhotoComponent
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
