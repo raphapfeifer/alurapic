@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  photos = [
-    {
-      url: 'https://st.depositphotos.com/1020341/4233/i/450/depositphotos_42333899-stock-photo-portrait-of-huge-beautiful-male.jpg',
-      description: 'Leão'
-    },
-    {
-      url:'https://cdn.cloudcoaching.com.br/wp-content/uploads/2019/01/os-tres-leoes-uma-historia-sobre-superacao-e-lideranca-1200x628.png.webp',
-      description: 'Leões'
-    }
-  ];
+  photos = [];
+  
+constructor(http: HttpClient){
+  console.log(http);
+}
+
 }
