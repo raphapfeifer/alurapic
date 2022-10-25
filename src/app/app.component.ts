@@ -8,10 +8,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
 
-  photos = [];
+  photos: Object[] = [];
   
 constructor(http: HttpClient){
-  console.log(http);
-}
-
+    http
+      .get<Object[]>('http://localhost:3000/flavio/photosT')
+      .subscribe(
+        photos => this.photos = photos,
+        err => console.log(err.message)
+        );
+  }
 }
