@@ -12,10 +12,14 @@ export class AppComponent {
   photos: Object[] = [];
   
 constructor(photoService: PhotoService){
-    photoService.listFromUser('flavio')
-    .subscribe(
-      photos => this.photos = photos,
-      err => console.log(err.message)
-      );
-  }
+    photoService
+      .listFromUser('flavio')
+      .subscribe(
+        photos => {
+          console.log(photos[1].description);
+          this.photos = photos;
+        },
+          err => console.log(err.message)
+      ) ;
+    }
 }
