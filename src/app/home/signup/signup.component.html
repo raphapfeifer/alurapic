@@ -3,42 +3,66 @@
 <form [formGroup]="signupForm" class="form mt-4">
     <div class="form-group">
         <input formControlName="email" class="form-control" placeholder="email" autofocus>
-        <ap-vmessage *ngIf="signupForm.get('email').erros?.required" text="O email é obrigatório">
-        </ap-vmessage>
-        <ap-vmessage *ngIf="signupForm.get('email').erros?.email" text="Email inválido">
-        </ap-vmessage>
+        <ap-vmessage 
+            *ngIf="signupForm.get('email').erros?.required" 
+            text="O email é obrigatório"
+        ></ap-vmessage>
+        <ap-vmessage 
+            *ngIf="signupForm.get('email').erros?.email" 
+            text="Email inválido"
+        ></ap-vmessage>
     </div>
 
     <div class="form-group">
         <input formControlName="fullName" class="form-control" placeholder="full name">
-        <ap-vmessage *ngIf="signupForm.get('fullName').erros?.required" text="O nome completo é obrigatório">
-        </ap-vmessage>
-        <ap-vmessage *ngIf="signupForm.get('fullName').erros?.minlength" text="É necessário o minímo de 2 caracteres">
-        </ap-vmessage>
-        <ap-vmessage *ngIf="signupForm.get('fullName').erros?.maxlength" text="O limite são de 40 caracteres">
-        </ap-vmessage>
+        <ap-vmessage 
+            *ngIf="signupForm.get('fullName').erros?.required" 
+            text="full name is required"
+        ></ap-vmessage>
+        <ap-vmessage 
+            *ngIf="signupForm.get('fullName').erros?.minlength" 
+            text="É necessário o minímo de 2 caracteres"
+        ></ap-vmessage>
+        <ap-vmessage 
+            *ngIf="signupForm.get('fullName').erros?.maxlength" 
+            text="O limite são de 40 caracteres"
+        ></ap-vmessage>
     </div>
 
     <div class="form-group">
         <input formControlName="userName" class="form-control" placeholder="user name">
-        <ap-vmessage *ngIf="signupForm.get('userName').erros?.required" text="O user name é obrigatório">
-        </ap-vmessage>
-        <ap-vmessage *ngIf="signupForm.get('userName').erros?.minlength" text="É necessário o minímo de 2 caracteres">
-        </ap-vmessage>
-        <ap-vmessage *ngIf="signupForm.get('userName').erros?.maxlength" text="O limite são de 30 caracteres">
-        </ap-vmessage>
-        <ap-vmessage *ngIf="signupForm.get('userName').erros?.pattern" text="Precisa ser um minusculo">
-        </ap-vmessage>
+        <ap-vmessage 
+            *ngIf="signupForm.get('userName').erros?.required" 
+            text="O user name é obrigatório"
+        ></ap-vmessage>
+        <ap-vmessage 
+            *ngIf="signupForm.get('userName').erros?.minlength" 
+            text="É necessário o minímo de 2 caracteres"
+        ></ap-vmessage>
+        <ap-vmessage 
+            *ngIf="signupForm.get('userName').erros?.maxlength" 
+            text="O limite são de 30 caracteres"
+        ></ap-vmessage>
+        <ap-vmessage 
+            *ngIf="signupForm.get('userName').erros?.lowerCase" 
+            text="Precisa ser um minusculo"
+        ></ap-vmessage>
     </div>
 
     <div class="form-group">
         <input formControlName="password" type="password" class="form-control" placeholder="password">
-        <ap-vmessage *ngIf="signupForm.get('password').erros?.required" text="A senha é obrigatória">
-        </ap-vmessage>
-        <ap-vmessage *ngIf="signupForm.get('password').erros?.minlength" text="É necessário o minímo de 8 caracteres">
-        </ap-vmessage>
-        <ap-vmessage *ngIf="signupForm.get('password').erros?.maxlength" text="O limite são de 14 caracteres">
-        </ap-vmessage>
+        <ap-vmessage 
+            *ngIf="signupForm.get('password').erros?.required" 
+            text="A senha é obrigatória"
+        ></ap-vmessage>
+        <ap-vmessage 
+            *ngIf="signupForm.get('password').erros?.minlength" 
+            text="É necessário o minímo de 8 caracteres"
+        ></ap-vmessage>
+        <ap-vmessage 
+            *ngIf="signupForm.get('password').erros?.maxlength" 
+            text="O limite são de 14 caracteres"
+        ></ap-vmessage>
     </div>
 
     <button class="btn btn-primary btn-block">Register</button>
