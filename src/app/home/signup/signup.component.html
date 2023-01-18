@@ -47,6 +47,10 @@
             *ngIf="signupForm.get('userName').errors?.lowerCase" 
             text="Precisa ser um minusculo"
         ></ap-vmessage>
+        <ap-vmessage 
+            *ngIf="signupForm.get('userName').errors?.userNameTaken" 
+            text="Esse usuário já existe"
+        ></ap-vmessage>
     </div>
 
     <div class="form-group">
@@ -65,7 +69,7 @@
         ></ap-vmessage>
     </div>
 
-    <button class="btn btn-primary btn-block">Register</button>
+    <button [disabled]="signupForm.invalid || signupForm.pending" class="btn btn-primary btn-block">Register</button>
 
     <p>Already a user?<a [routerLink]="['']">Sign In!</a></p>
 </form>
