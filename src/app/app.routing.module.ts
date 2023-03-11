@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RequiresAutenticationGuard } from './core/auth/requires-autentication.guard';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { PhotoDetailsComponent } from './photos/photo-details/photo-details.component';
 
 
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
@@ -29,6 +30,10 @@ const routes: Routes = [
         component: PhotoFormComponent,
         canActivate:[RequiresAutenticationGuard]
      },
+     {
+        path: 'p/:photoId',
+        component: PhotoDetailsComponent
+     }
     { 
         path: '**', 
         component: NotFoundComponent
