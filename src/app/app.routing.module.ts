@@ -33,7 +33,7 @@ const routes: Routes = [
      {
         path: 'p/:photoId',
         component: PhotoDetailsComponent
-     }
+     },
     { 
         path: '**', 
         component: NotFoundComponent
