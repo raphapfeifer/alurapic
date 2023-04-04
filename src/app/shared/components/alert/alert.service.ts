@@ -7,7 +7,7 @@ import { Alert, AlertType } from "./alert";
 })
 export class AlertService {
     
-    alertSubject: Subject<Alert>
+    alertSubject: Subject<Alert> = new Subject<Alert>();
 
     sucess(message: string){
         this.alert(AlertType.SUCCESS, message);
